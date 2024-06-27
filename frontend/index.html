@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abertura de Ocorrência</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Abertura de Ocorrência</h2>
+        <form id="form-ocorrencia">
+            <label for="telefone">Telefone *</label>
+            <input type="text" id="telefone" name="telefone" required>
+
+            <label for="solicitante">Solicitante *</label>
+            <input type="text" id="solicitante" name="solicitante" required>
+
+            <label for="ocorrencia">Ocorrência *</label>
+            <select id="ocorrencia" name="ocorrencia" required>
+                <option value="">Escolha uma emergência</option>
+                <option value="incendio">Incêndio</option>
+                <option value="acidente">Acidente</option>
+                <!-- Adicione mais opções conforme necessário -->
+            </select>
+
+            <label class="checkbox-container">
+                <input type="checkbox" id="relacionado-desastre" name="relacionado-desastre">
+                Ocorrência relacionada a desastre?
+            </label>
+
+            <label for="descricao">Descrição (Twitter) *</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+
+            <button type="submit">Confirmar</button>
+            <button type="reset">Resetar</button>
+        </form>
+        <div id="resposta" class="response-container"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
